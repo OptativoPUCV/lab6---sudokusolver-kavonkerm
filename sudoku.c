@@ -57,7 +57,7 @@ List* get_adj_nodes(Node* n){
   int block_col = 3;
   for (int i = 0; i < 9; i++) {
     if (i != col) {
-      Node* adj_node = (Node*) malloc(sizeof(Node));
+      Node* adj_node = (Node*) calloc(sizeof(Node));
       if (adj_node->sudo[fil][col] == 0) { 
         pushBack(list, adj_node); 
       }
@@ -65,7 +65,7 @@ List* get_adj_nodes(Node* n){
   }
   for (int i = 0; i < 9; i++) {
     if (i != fil) {
-      Node* adj_node = (Node*) malloc(sizeof(Node));
+      Node* adj_node = (Node*) calloc(sizeof(Node));
       if (adj_node->sudo[fil][col] == 0) { 
         pushBack(list, adj_node); 
       }
@@ -75,7 +75,7 @@ List* get_adj_nodes(Node* n){
   for (int i = block_row * 3; i < block_row * 3 + 3; i++) {
     for (int j = block_col * 3; j < block_col * 3 + 3; j++) {
       if (i != fil && j != col) {
-        Node* adj_node = (Node*) malloc(sizeof(Node));
+        Node* adj_node = (Node*) calloc(sizeof(Node));
         if (adj_node->sudo[fil][col] == 0) { 
           pushBack(list, adj_node); 
         }
