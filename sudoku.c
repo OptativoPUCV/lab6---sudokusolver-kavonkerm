@@ -61,7 +61,6 @@ List* get_adj_nodes(Node* n){
             Node *adjNode = (Node*) malloc(sizeof(Node));
             for (int i = 0; i < 9; i++) {
               for (int j = 0; j < 9; j++){
-                adjNode->sudo[fil][col] = nuevoMov;
                 pushBack(list,adjNode);
               }
             }

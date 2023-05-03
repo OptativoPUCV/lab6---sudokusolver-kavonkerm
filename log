@@ -467,3 +467,14 @@ sudoku.c:64:41: error: ‘nuevoMov’ may be used uninitialized in this function
 cc1: all warnings being treated as errors
 Compilation failed
 a3e20e1
+Wed 03 May 2023 10:23:55 PM UTC: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:55:7: error: unused variable ‘nuevoMov’ [-Werror=unused-variable]
+   55 |   int nuevoMov;
+      |       ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7a9a33b
