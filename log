@@ -327,3 +327,9 @@ sudoku.c:78:26: error: initialization of ‘Node *’ from ‘int’ makes point
 cc1: all warnings being treated as errors
 Compilation failed
 ea24ea4
+Wed 03 May 2023 09:22:04 PM UTC: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  0|5
+total_score: 0/70
+4035c8c
