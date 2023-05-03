@@ -425,3 +425,13 @@ sudoku.c:60:23: error: assignment to expression with array type
       |                       ^
 Compilation failed
 c97b5c5
+Wed 03 May 2023 10:09:44 PM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:23: error: assignment to expression with array type
+   60 |         adjNode->sudo = n->sudo;
+      |                       ^
+Compilation failed
+6c8e7cc
