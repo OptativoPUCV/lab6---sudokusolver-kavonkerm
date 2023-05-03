@@ -309,3 +309,21 @@ sudoku.c:61:30: error: array subscript 9 is above array bounds of ‘int[9]’ [
 cc1: all warnings being treated as errors
 Compilation failed
 ab17eb2
+Wed 03 May 2023 09:20:53 PM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:24: error: implicit declaration of function ‘get_node’ [-Werror=implicit-function-declaration]
+   60 |       Node* adj_node = get_node(fil, i);
+      |                        ^~~~~~~~
+sudoku.c:60:24: error: initialization of ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+sudoku.c:68:24: error: initialization of ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   68 |       Node* adj_node = get_node(i, col);
+      |                        ^~~~~~~~
+sudoku.c:78:26: error: initialization of ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   78 |         Node* adj_node = get_node(i, j);
+      |                          ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ea24ea4
