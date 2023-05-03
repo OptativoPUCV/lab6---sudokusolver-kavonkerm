@@ -478,3 +478,9 @@ sudoku.c:55:7: error: unused variable ‘nuevoMov’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 7a9a33b
+Wed 03 May 2023 10:24:05 PM UTC: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+2ef688e
