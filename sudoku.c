@@ -58,6 +58,7 @@ int is_valid(Node* n){
         }
       }
     }
+  }
   // Validar columnas
   for (int col = 0; col < 9; col++) {
     int used_nums[9] = {0};
@@ -72,13 +73,12 @@ int is_valid(Node* n){
       }
     }
   }
-
   // Validar submatrices de 3x3
-  for (int sub_row = 0; sub_row < 9; sub_row += SUB_SIZE) {
-    for (int sub_col = 0; sub_col < 9; sub_col += SUB_SIZE) {
+  for (int i = 0; i < 9; i += 3) {
+    for (int j = 0; j < 9; j += 3) {
       int used_nums[9] = {0};
-      for (int row = sub_row; row < sub_row + SUB_SIZE; row++) {
-        for (int col = sub_col; col < sub_col + SUB_SIZE; col++)} 
+      for (int row = i; row < i + 3; row++) {
+        for (int col = j; col < j + 3; col++) {
           int num = n->sudo[row][col];
           if (num != 0) {
             if (used_nums[num - 1]) {
@@ -91,7 +91,9 @@ int is_valid(Node* n){
       }
     }
   }
-    return 1;
+
+
+  return 1;
 }
 
 List* get_adj_nodes(Node* n){

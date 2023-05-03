@@ -576,3 +576,38 @@ sudoku.c:92:5: error: control reaches end of non-void function [-Werror=return-t
 cc1: all warnings being treated as errors
 Compilation failed
 545f65d
+Wed 03 May 2023 11:20:04 PM UTC: 
+ sudoku.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+sudoku.c:63:3: error: expected identifier or ‘(’ before ‘for’
+   63 |   for (int col = 0; col < 9; col++) {
+      |   ^~~
+sudoku.c:63:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+   63 |   for (int col = 0; col < 9; col++) {
+      |                         ^
+sudoku.c:63:33: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘++’ token
+   63 |   for (int col = 0; col < 9; col++) {
+      |                                 ^~
+sudoku.c:77:3: error: expected identifier or ‘(’ before ‘for’
+   77 |   for (int i = 0; i < 9; i += 3) {
+      |   ^~~
+sudoku.c:77:21: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+   77 |   for (int i = 0; i < 9; i += 3) {
+      |                     ^
+sudoku.c:77:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘+=’ token
+   77 |   for (int i = 0; i < 9; i += 3) {
+      |                            ^~
+sudoku.c:96:3: error: expected identifier or ‘(’ before ‘return’
+   96 |   return 1;
+      |   ^~~~~~
+sudoku.c:97:1: error: expected identifier or ‘(’ before ‘}’ token
+   97 | }
+      | ^
+sudoku.c: In function ‘is_valid’:
+sudoku.c:61:3: error: control reaches end of non-void function [-Werror=return-type]
+   61 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+025fe3d
