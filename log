@@ -446,3 +446,13 @@ sudoku.c:60:33: error: ‘nuevoMov’ may be used uninitialized in this function
 cc1: all warnings being treated as errors
 Compilation failed
 244b6ca
+Wed 03 May 2023 10:12:10 PM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:23: error: assignment to expression with array type
+   60 |         adjNode->sudo = n->sudo;
+      |                       ^
+Compilation failed
+55340fa
