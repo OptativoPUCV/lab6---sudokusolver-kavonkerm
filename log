@@ -399,3 +399,19 @@ sudoku.c:54:7: error: unused variable ‘fil’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 3d17c48
+Wed 03 May 2023 10:07:49 PM UTC: 
+ sudoku.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:23: error: assignment to expression with array type
+   60 |         adjNode->sudo = n->sudo;
+      |                       ^
+sudoku.c:62:31: error: expected ‘;’ before ‘}’ token
+   62 |         pushBack(list,adjNode)
+      |                               ^
+      |                               ;
+   63 |       }
+      |       ~                        
+Compilation failed
+88905cf

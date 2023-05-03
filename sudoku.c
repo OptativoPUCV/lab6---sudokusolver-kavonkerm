@@ -53,12 +53,12 @@ List* get_adj_nodes(Node* n){
   List* list = createList();
   int fil, col;
   int nuevoMov;
-  for (i = 0; i < 3; i++){
-    for (j = 0; j < 3; j++){
-      if (n->sudo[i][j] == 0){
+  for (fil = 0; fil < 3; fil++){
+    for (col = 0; col < 3; col++){
+      if (n->sudo[fil][col] == 0){
         Node *adjNode = (Node*) malloc(sizeof(Node));
         adjNode->sudo = n->sudo;
-        adjNode->sudo[i][j] = nuevoMov;
+        adjNode->sudo[fil][col] = nuevoMov;
         pushBack(list,adjNode)
       }
     }
