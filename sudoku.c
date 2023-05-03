@@ -58,7 +58,7 @@ List* get_adj_nodes(Node* n){
   for (int i = 0; i < 9; i++) {
     if (i != col) {
       Node* adj_node = get_node(fil, i);
-      if (adj_node[fil][col] == 0) { 
+      if (adj_node->sudo[fil][col] == 0) { 
         pushBack(list, adj_node); 
       }
     }
@@ -66,7 +66,7 @@ List* get_adj_nodes(Node* n){
   for (int i = 0; i < 9; i++) {
     if (i != fil) {
       Node* adj_node = get_node(i, col);
-      if (adj_node[fil][col] == 0) { 
+      if (adj_node->sudo[fil][col] == 0) { 
         pushBack(list, adj_node); 
       }
     }
@@ -76,7 +76,7 @@ List* get_adj_nodes(Node* n){
     for (int j = block_col * 3; j < block_col * 3 + 3; j++) {
       if (i != fil && j != col) {
         Node* adj_node = get_node(i, j);
-        if (adj_node[fil][col] == 0) { 
+        if (adj_node->sudo[fil][col] == 0) { 
           pushBack(list, adj_node); 
         }
       }
