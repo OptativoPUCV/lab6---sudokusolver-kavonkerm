@@ -1,0 +1,24 @@
+Wed 03 May 2023 08:36:03 PM UTC: 
+ sudoku.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:56:25: error: comparison between pointer and integer [-Werror]
+   56 |   if (n->sudo[fil][col] == "\0"){
+      |                         ^~
+sudoku.c:56:25: error: comparison with string literal results in unspecified behavior [-Werror=address]
+sudoku.c:58:19: error: assignment to expression with array type
+   58 |     inicial->sudo = n->sudo;
+      |                   ^
+sudoku.c:60:20: error: passing argument 2 of ‘pushBack’ makes pointer from integer without a cast [-Werror=int-conversion]
+   60 |     pushBack(list, newMov);
+      |                    ^~~~~~
+      |                    |
+      |                    char
+In file included from test.c:4:
+list.h:23:33: note: expected ‘void *’ but argument is of type ‘char’
+   23 | void pushBack(List* list, void* data);
+      |                           ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+62b450d
