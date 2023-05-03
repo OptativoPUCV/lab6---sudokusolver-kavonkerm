@@ -541,3 +541,38 @@ Wed 03 May 2023 10:34:17 PM UTC:
  tests:  2|4
 total_score: 15/70
 00e2556
+Wed 03 May 2023 11:08:45 PM UTC: 
+ sudoku.c | 58 ++++++++++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 38 insertions(+), 20 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:77:49: error: ‘SUB_SIZE’ undeclared (first use in this function)
+   77 |   for (int sub_row = 0; sub_row < 9; sub_row += SUB_SIZE) {
+      |                                                 ^~~~~~~~
+sudoku.c:77:49: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:81:65: error: expected expression before ‘}’ token
+   81 |         for (int col = sub_col; col < sub_col + SUB_SIZE; col++)}
+      |                                                                 ^
+sudoku.c:82:29: error: ‘row’ undeclared (first use in this function)
+   82 |           int num = n->sudo[row][col];
+      |                             ^~~
+sudoku.c:82:34: error: ‘col’ undeclared (first use in this function)
+   82 |           int num = n->sudo[row][col];
+      |                                  ^~~
+sudoku.c: At top level:
+sudoku.c:93:3: error: expected identifier or ‘(’ before ‘}’ token
+   93 |   }
+      |   ^
+sudoku.c:94:5: error: expected identifier or ‘(’ before ‘return’
+   94 |     return 1;
+      |     ^~~~~~
+sudoku.c:95:1: error: expected identifier or ‘(’ before ‘}’ token
+   95 | }
+      | ^
+sudoku.c: In function ‘is_valid’:
+sudoku.c:92:5: error: control reaches end of non-void function [-Werror=return-type]
+   92 |     }
+      |     ^
+cc1: all warnings being treated as errors
+Compilation failed
+545f65d

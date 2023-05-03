@@ -44,37 +44,55 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+  // Validar filas
+  for (int row = 0; row < 9; row++) {
+    int used_nums[9] = {0};
+      for (int col = 0; col < 9; col++) {
+        int num = n->sudo[row][col];
+        if (num != 0) {
+          if (used_nums[num - 1]) {
+            return 0;
+          } else {
+            used_nums[num - 1] = 1;
+          }
+        }
+      }
+    }
+  // Validar columnas
+  for (int col = 0; col < 9; col++) {
+    int used_nums[9] = {0};
+    for (int row = 0; row < 9; row++) {
+      int num = n->sudo[row][col];
+      if (num != 0) {
+        if (used_nums[num - 1]) {
+          return 0;
+        } else {
+          used_nums[num - 1] = 1;
+        }
+      }
+    }
+  }
 
+  // Validar submatrices de 3x3
+  for (int sub_row = 0; sub_row < 9; sub_row += SUB_SIZE) {
+    for (int sub_col = 0; sub_col < 9; sub_col += SUB_SIZE) {
+      int used_nums[9] = {0};
+      for (int row = sub_row; row < sub_row + SUB_SIZE; row++) {
+        for (int col = sub_col; col < sub_col + SUB_SIZE; col++)} 
+          int num = n->sudo[row][col];
+          if (num != 0) {
+            if (used_nums[num - 1]) {
+              return 0;
+            } else {
+              used_nums[num - 1] = 1;
+            }
+          }
+        }
+      }
+    }
+  }
     return 1;
 }
-
-/*int is_valid(Node* n, int row, int col, int num) {
-  // Comprobar si el número ya existe en la misma fila
-  for (int i = 0; i < BOARD_SIZE; i++) {
-    if (n->sudo[row][i] == num) {
-      return 0;
-      }
-  }
-  // Comprobar si el número ya existe en la misma columna
-  for (int i = 0; i < BOARD_SIZE; i++) {
-    if (n->sudo[i][col] == num) {
-      return 0;
-    }
-  }
-  // Comprobar si el número ya existe en el mismo subcuadrado de 3x3
-  int sub_row = row - (row % SUB_SIZE);
-  int sub_col = col - (col % SUB_SIZE);
-  for (int i = sub_row; i < sub_row + SUB_SIZE; i++) {
-    for (int j = sub_col; j < sub_col + SUB_SIZE; j++) {
-      if (n->sudo[i][j] == num) {
-        return 0;
-      }
-    }
-  }
-  return 1;
-}*/
-
-
 
 List* get_adj_nodes(Node* n){
   List* list = createList();
