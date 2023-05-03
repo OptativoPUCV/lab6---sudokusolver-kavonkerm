@@ -75,7 +75,7 @@ int is_valid(Node* n){
   // Validar submatrices de 3x3
   for (int i = 0; i < 9; i += 3) {
     for (int j = 0; j < 9; j += 3) {
-      int numVistos[3] = {0};
+      int numVistos[9] = {0};
       for (int row = i; row < i + 3; row++) {
         for (int col = j; col < j + 3; col++) {
           int num = n->sudo[row][col];
