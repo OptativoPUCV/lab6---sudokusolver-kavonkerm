@@ -55,7 +55,7 @@ List* get_adj_nodes(Node* n){
   int newMov;
   for(fil = 0; fil < 9; fil++){
     for(col = 0; col < 9; col++){
-      if (n->sudo[fil][col] == NULL){
+      if (n->sudo[fil][col] == 0){
         Node* inicial = (Node*) malloc(sizeof(Node));
         inicial->sudo = n->sudo;
         inicial->sudo[fil][col] = newMov;
