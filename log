@@ -70,3 +70,26 @@ list.h:23:33: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 b1a2525
+Wed 03 May 2023 08:39:56 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:58:29: error: comparison between pointer and integer [-Werror]
+   58 |       if (n->sudo[fil][col] == NULL){
+      |                             ^~
+sudoku.c:60:23: error: assignment to expression with array type
+   60 |         inicial->sudo = n->sudo;
+      |                       ^
+sudoku.c:62:24: error: passing argument 2 of ‘pushBack’ makes pointer from integer without a cast [-Werror=int-conversion]
+   62 |         pushBack(list, newMov);
+      |                        ^~~~~~
+      |                        |
+      |                        int
+In file included from test.c:4:
+list.h:23:33: note: expected ‘void *’ but argument is of type ‘int’
+   23 | void pushBack(List* list, void* data);
+      |                           ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cfc45ea
