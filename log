@@ -456,3 +456,14 @@ sudoku.c:60:23: error: assignment to expression with array type
       |                       ^
 Compilation failed
 55340fa
+Wed 03 May 2023 10:23:32 PM UTC: 
+ sudoku.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:64:41: error: ‘nuevoMov’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   64 |                 adjNode->sudo[fil][col] = nuevoMov;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a3e20e1
