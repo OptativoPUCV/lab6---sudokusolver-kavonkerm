@@ -57,7 +57,6 @@ int is_valid(Node* n){
           }
         }
       }
-    }
   }
   // Validar columnas
   for (int col = 0; col < 9; col++) {
