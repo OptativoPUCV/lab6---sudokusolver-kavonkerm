@@ -369,3 +369,33 @@ Wed 03 May 2023 09:29:42 PM UTC:
  tests:  0|5
 total_score: 0/70
 6756e10
+Wed 03 May 2023 10:07:19 PM UTC: 
+ sudoku.c | 37 +++++++++----------------------------
+ 1 file changed, 9 insertions(+), 28 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:56:8: error: ‘i’ undeclared (first use in this function)
+   56 |   for (i = 0; i < 3; i++){
+      |        ^
+sudoku.c:56:8: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:57:10: error: ‘j’ undeclared (first use in this function)
+   57 |     for (j = 0; j < 3; j++){
+      |          ^
+sudoku.c:60:23: error: assignment to expression with array type
+   60 |         adjNode->sudo = n->sudo;
+      |                       ^
+sudoku.c:62:31: error: expected ‘;’ before ‘}’ token
+   62 |         pushBack(list,adjNode)
+      |                               ^
+      |                               ;
+   63 |       }
+      |       ~                        
+sudoku.c:54:12: error: unused variable ‘col’ [-Werror=unused-variable]
+   54 |   int fil, col;
+      |            ^~~
+sudoku.c:54:7: error: unused variable ‘fil’ [-Werror=unused-variable]
+   54 |   int fil, col;
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+3d17c48

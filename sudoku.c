@@ -51,34 +51,15 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
   List* list = createList();
-  int fil = 8;
-  int col = 8;
-  int block_row = 3; 
-  int block_col = 3;
-  for (int i = 0; i < 9; i++) {
-    if (i != col) {
-      Node* adj_node = (Node*) malloc(sizeof(Node));
-      if (adj_node->sudo[fil][col] == 0) { 
-        pushBack(list, adj_node); 
-      }
-    }
-  }
-  for (int i = 0; i < 9; i++) {
-    if (i != fil) {
-      Node* adj_node = (Node*) malloc(sizeof(Node));
-      if (adj_node->sudo[fil][col] == 0) { 
-        pushBack(list, adj_node); 
-      }
-    }
-  }
-
-  for (int i = block_row * 3; i < block_row * 3 + 3; i++) {
-    for (int j = block_col * 3; j < block_col * 3 + 3; j++) {
-      if (i != fil && j != col) {
-        Node* adj_node = (Node*) malloc(sizeof(Node));
-        if (adj_node->sudo[fil][col] == 0) { 
-          pushBack(list, adj_node); 
-        }
+  int fil, col;
+  int nuevoMov;
+  for (i = 0; i < 3; i++){
+    for (j = 0; j < 3; j++){
+      if (n->sudo[i][j] == 0){
+        Node *adjNode = (Node*) malloc(sizeof(Node));
+        adjNode->sudo = n->sudo;
+        adjNode->sudo[i][j] = nuevoMov;
+        pushBack(list,adjNode)
       }
     }
   }
