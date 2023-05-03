@@ -46,28 +46,28 @@ void print_node(Node* n){
 int is_valid(Node* n){
   // Validar filas
   for (int row = 0; row < 9; row++) {
-    int used_nums[9] = {0};
+    int numVistos[9] = {0};
       for (int col = 0; col < 9; col++) {
         int num = n->sudo[row][col];
         if (num != 0) {
-          if (used_nums[num - 1]) {
+          if (numVistos[num - 1]) {
             return 0;
           } else {
-            used_nums[num - 1] = 1;
+            numVistos[num - 1] = 1;
           }
         }
       }
   }
   // Validar columnas
   for (int col = 0; col < 9; col++) {
-    int used_nums[9] = {0};
+    int numVistos[9] = {0};
     for (int row = 0; row < 9; row++) {
       int num = n->sudo[row][col];
       if (num != 0) {
-        if (used_nums[num - 1]) {
+        if (numVistos[num - 1]) {
           return 0;
         } else {
-          used_nums[num - 1] = 1;
+          numVistos[num - 1] = 1;
         }
       }
     }
@@ -75,23 +75,21 @@ int is_valid(Node* n){
   // Validar submatrices de 3x3
   for (int i = 0; i < 9; i += 3) {
     for (int j = 0; j < 9; j += 3) {
-      int used_nums[9] = {0};
+      int numVistos[9] = {0};
       for (int row = i; row < i + 3; row++) {
         for (int col = j; col < j + 3; col++) {
           int num = n->sudo[row][col];
           if (num != 0) {
-            if (used_nums[num - 1]) {
+            if (numVistos[num - 1]) {
               return 0;
             } else {
-              used_nums[num - 1] = 1;
+              numVistos[num - 1] = 1;
             }
           }
         }
       }
     }
   }
-
-
   return 1;
 }
 
