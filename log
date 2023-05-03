@@ -415,3 +415,13 @@ sudoku.c:62:31: error: expected ‘;’ before ‘}’ token
       |       ~                        
 Compilation failed
 88905cf
+Wed 03 May 2023 10:08:00 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:23: error: assignment to expression with array type
+   60 |         adjNode->sudo = n->sudo;
+      |                       ^
+Compilation failed
+c97b5c5

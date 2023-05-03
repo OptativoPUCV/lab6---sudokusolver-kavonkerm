@@ -59,7 +59,7 @@ List* get_adj_nodes(Node* n){
         Node *adjNode = (Node*) malloc(sizeof(Node));
         adjNode->sudo = n->sudo;
         adjNode->sudo[fil][col] = nuevoMov;
-        pushBack(list,adjNode)
+        pushBack(list,adjNode);
       }
     }
   }
