@@ -43,10 +43,37 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+/*int is_valid(Node* n){
 
     return 1;
+}*/
+
+int is_valid(Node* n, int row, int col, int num) {
+  // Comprobar si el número ya existe en la misma fila
+  for (int i = 0; i < BOARD_SIZE; i++) {
+    if (n->sudo[row][i] == num) {
+      return 0;
+      }
+  }
+  // Comprobar si el número ya existe en la misma columna
+  for (int i = 0; i < BOARD_SIZE; i++) {
+    if (n->sudo[i][col] == num) {
+      return 0;
+    }
+  }
+  // Comprobar si el número ya existe en el mismo subcuadrado de 3x3
+  int sub_row = row - (row % SUB_SIZE);
+  int sub_col = col - (col % SUB_SIZE);
+  for (int i = sub_row; i < sub_row + SUB_SIZE; i++) {
+    for (int j = sub_col; j < sub_col + SUB_SIZE; j++) {
+      if (n->sudo[i][j] == num) {
+        return 0;
+      }
+    }
+  }
+  return 1;
 }
+
 
 
 List* get_adj_nodes(Node* n){
@@ -56,15 +83,18 @@ List* get_adj_nodes(Node* n){
     for (col = 0; col < 9; col++){
       if (n->sudo[fil][col] == 0){
         for (int num = 1; num <= 9; num++) {
-          if (is_valid(n)) {
+          if (is_valid(n,fil,col,num)) {
             Node *adjNode = (Node*) malloc(sizeof(Node));
             for (int i = 0; i < 9; i++) {
               for (int j = 0; j < 9; j++){
-                pushBack(list,adjNode);
+                adjNode->sudo[i][j] = n->sudo[i][j];
               }
             }
+            adjNode->sudo[fil][col] = num;
+            pushBack(list, adjNode);
           }
         }
+        return list;
       }
     }
   }

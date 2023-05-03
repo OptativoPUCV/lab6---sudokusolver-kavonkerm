@@ -484,3 +484,54 @@ Wed 03 May 2023 10:24:05 PM UTC:
  tests:  0|5
 total_score: 0/70
 2ef688e
+Wed 03 May 2023 10:31:18 PM UTC: 
+ sudoku.c | 35 ++++++++++++++++++++++++++++++++---
+ 1 file changed, 32 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:53:23: error: ‘BOARD_SIZE’ undeclared (first use in this function)
+   53 |   for (int i = 0; i < BOARD_SIZE; i++) {
+      |                       ^~~~~~~~~~
+sudoku.c:53:23: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:65:30: error: ‘SUB_SIZE’ undeclared (first use in this function)
+   65 |   int sub_row = row - (row % SUB_SIZE);
+      |                              ^~~~~~~~
+test.c: In function ‘test_isvalid’:
+test.c:112:9: error: too few arguments to function ‘is_valid’
+  112 |     if(!is_valid(initial)){
+      |         ^~~~~~~~
+In file included from test.c:5:
+sudoku.c:51:5: note: declared here
+   51 | int is_valid(Node* n, int row, int col, int num) {
+      |     ^~~~~~~~
+test.c:120:8: error: too few arguments to function ‘is_valid’
+  120 |     if(is_valid(initial)){
+      |        ^~~~~~~~
+In file included from test.c:5:
+sudoku.c:51:5: note: declared here
+   51 | int is_valid(Node* n, int row, int col, int num) {
+      |     ^~~~~~~~
+test.c:131:8: error: too few arguments to function ‘is_valid’
+  131 |     if(is_valid(initial)){
+      |        ^~~~~~~~
+In file included from test.c:5:
+sudoku.c:51:5: note: declared here
+   51 | int is_valid(Node* n, int row, int col, int num) {
+      |     ^~~~~~~~
+test.c:141:8: error: too few arguments to function ‘is_valid’
+  141 |     if(is_valid(initial)){
+      |        ^~~~~~~~
+In file included from test.c:5:
+sudoku.c:51:5: note: declared here
+   51 | int is_valid(Node* n, int row, int col, int num) {
+      |     ^~~~~~~~
+test.c: In function ‘test_dfs’:
+test.c:213:9: error: too few arguments to function ‘is_valid’
+  213 |     if(!is_valid(final)){
+      |         ^~~~~~~~
+In file included from test.c:5:
+sudoku.c:51:5: note: declared here
+   51 | int is_valid(Node* n, int row, int col, int num) {
+      |     ^~~~~~~~
+Compilation failed
+2cba1ce
