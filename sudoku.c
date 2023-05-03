@@ -43,12 +43,12 @@ void print_node(Node* n){
     printf("\n");
 }
 
-/*int is_valid(Node* n){
+int is_valid(Node* n){
 
     return 1;
-}*/
+}
 
-int is_valid(Node* n, int row, int col, int num) {
+/*int is_valid(Node* n, int row, int col, int num) {
   // Comprobar si el número ya existe en la misma fila
   for (int i = 0; i < BOARD_SIZE; i++) {
     if (n->sudo[row][i] == num) {
@@ -72,7 +72,7 @@ int is_valid(Node* n, int row, int col, int num) {
     }
   }
   return 1;
-}
+}*/
 
 
 
@@ -83,7 +83,7 @@ List* get_adj_nodes(Node* n){
     for (col = 0; col < 9; col++){
       if (n->sudo[fil][col] == 0){
         for (int num = 1; num <= 9; num++) {
-          if (is_valid(n,fil,col,num)) {
+          if (is_valid(n)) {
             Node *adjNode = (Node*) malloc(sizeof(Node));
             for (int i = 0; i < 9; i++) {
               for (int j = 0; j < 9; j++){
