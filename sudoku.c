@@ -106,13 +106,12 @@ List* get_adj_nodes(Node* n){
               for (int j = 0; j < 9; j++){
                 adjNode->sudo[i][j] = n->sudo[i][j];
               }
-              return list;
             }
             adjNode->sudo[fil][col] = num;
             pushBack(list, adjNode);
             
           }
-          
+          return list;
         }
         
       }
