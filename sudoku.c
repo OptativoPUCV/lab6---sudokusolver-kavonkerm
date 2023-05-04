@@ -112,13 +112,13 @@ List* get_adj_nodes(Node* n){
           }
           
         }
-        
+        return list;
       }
-      return list;
+      
     }
     
   }
-  
+  return list;
 }
 
 
