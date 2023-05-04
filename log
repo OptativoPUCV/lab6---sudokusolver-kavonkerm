@@ -1122,3 +1122,14 @@ Thu 04 May 2023 04:36:13 AM UTC:
  tests:  6|2
 total_score: 45/70
 29606cb
+Thu 04 May 2023 04:37:47 AM UTC: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:147:9: error: ‘n’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  147 |     if (is_final(n)) return n;
+      |         ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2f0b9aa
