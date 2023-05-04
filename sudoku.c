@@ -138,7 +138,7 @@ Node* DFS(Node* initial, int* cont){
   Stack* stack = createStack();
   push(stack,initial);
   while(get_size(stack) != 0){
-    Node* n = pop(stack);
+    
     List* adj = get_adj_nodes(n);
     Node* aux = first(adj);
     while(aux){
