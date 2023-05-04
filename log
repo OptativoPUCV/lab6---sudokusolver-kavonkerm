@@ -858,3 +858,17 @@ sudoku.c:143:18: error: ‘n’ undeclared (first use in this function)
 sudoku.c:143:18: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 150a40d
+Thu 04 May 2023 01:09:00 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:142:18: error: ‘n’ undeclared (first use in this function)
+  142 |     pop(stack) = n;
+      |                  ^
+sudoku.c:142:18: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:142:16: error: invalid use of void expression
+  142 |     pop(stack) = n;
+      |                ^
+Compilation failed
+302e692
