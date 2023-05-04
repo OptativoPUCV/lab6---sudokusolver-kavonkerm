@@ -140,7 +140,7 @@ Node* DFS(Node* initial, int* cont){
   cont = 0;
   while(get_size(stack) != 0){
     Node* n = pop(stack);
-    
+    if (is_final(n)) return n;
     List* adj = get_adj_nodes(n);
     Node* aux = first(adj);
     while(aux){
@@ -149,7 +149,7 @@ Node* DFS(Node* initial, int* cont){
       cont++;
     }
   }
-  return initial;
+  return NULL;
 }
 
 
