@@ -872,3 +872,14 @@ sudoku.c:142:16: error: invalid use of void expression
       |                ^
 Compilation failed
 302e692
+Thu 04 May 2023 01:12:00 AM UTC: 
+ sudoku.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:144:9: error: ‘n’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  144 |     if (is_final(n)) return n;
+      |         ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a77c302
