@@ -137,7 +137,7 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
   Stack* stack = createStack();
   push(stack,initial);
-  while(size(stack) != 0){
+  while(get_size(stack) != 0){
     Node* n = pop(Stack);
     List* adj = get_adj_nodes(n);
     Node* aux = first(adj);

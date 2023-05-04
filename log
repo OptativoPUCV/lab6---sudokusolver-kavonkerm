@@ -698,3 +698,21 @@ sudoku.c:150:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 8ee31a3
+Thu 04 May 2023 12:27:26 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:141:19: error: expected expression before ‘Stack’
+  141 |     Node* n = pop(Stack);
+      |                   ^~~~~
+sudoku.c:149:10: error: ‘aux’ undeclared (first use in this function)
+  149 |   return aux;
+      |          ^~~
+sudoku.c:149:10: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:150:1: error: control reaches end of non-void function [-Werror=return-type]
+  150 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+b738100
