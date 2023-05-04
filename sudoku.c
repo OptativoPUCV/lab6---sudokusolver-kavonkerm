@@ -110,8 +110,9 @@ List* get_adj_nodes(Node* n){
             adjNode->sudo[fil][col] = num;
             pushBack(list, adjNode);
           }
+          return list;
         }
-        return list;
+        
       }
     }
   }
