@@ -98,7 +98,7 @@ List* get_adj_nodes(Node* n){
   int fil, col;
   for (fil = 0; fil < 9; fil++){
     for (col = 0; col < 9; col++){
-      if (n->sudo[fil][col] == 0){
+      if (n->sudo[fil][col] == 0 && num!=3){
         for (int num = 1; num <= 4; num++) {
           if (is_valid(n)) {
             Node *adjNode = (Node*) malloc(sizeof(Node));
