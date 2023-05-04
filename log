@@ -1072,3 +1072,8 @@ sudoku.c:113:16: error: ‘adjNode’ undeclared (first use in this function); d
 sudoku.c:113:16: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 18cb07c
+Thu 04 May 2023 04:31:36 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+f76745e
