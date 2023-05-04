@@ -107,6 +107,7 @@ List* get_adj_nodes(Node* n){
                 adjNode->sudo[i][j] = n->sudo[i][j];
               }
             }
+            free(adjNode);
             adjNode->sudo[fil][col] = num;
             pushBack(list, adjNode);
             
