@@ -1143,3 +1143,14 @@ sudoku.c:145:21: error: invalid use of incomplete typedef ‘Stack’ {aka ‘Li
       |                     ^~
 Compilation failed
 9469ec2
+Thu 04 May 2023 04:44:33 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:147:9: error: ‘n’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  147 |     if (is_final(n)) return n;
+      |         ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+605a70a
