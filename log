@@ -748,3 +748,17 @@ sudoku.c:149:10: error: returning ‘Stack *’ {aka ‘List *’} from a functi
 cc1: all warnings being treated as errors
 Compilation failed
 d0fd512
+Thu 04 May 2023 12:28:22 AM UTC: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:141:15: error: void value not ignored as it ought to be
+  141 |     Node* n = pop(stack);
+      |               ^~~
+sudoku.c:149:1: error: control reaches end of non-void function [-Werror=return-type]
+  149 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1c1b500
