@@ -86,8 +86,8 @@ int is_valid(Node* n){
         numVistos[num - 1] = 1;
       }
     }
-  }
-  return 1;*/
+  }*/
+  return 1;
 }
 
 List* get_adj_nodes(Node* n){
