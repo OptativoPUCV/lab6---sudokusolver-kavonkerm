@@ -45,10 +45,10 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
   // Validacion de filas
-  for (int row = 0; row < 9; row++) {
+  for (int fil = 0; fil < 9; fil++) {
     int numVistos[9] = {0};
       for (int col = 0; col < 9; col++) {
-        int num = n->sudo[row][col];
+        int num = n->sudo[fil][col];
         if (num != 0) {
           if (numVistos[num - 1]) {
             return 0;
@@ -61,8 +61,8 @@ int is_valid(Node* n){
   // Validación de columnas
   for (int col = 0; col < 9; col++) {
     int numVistos[9] = {0};
-    for (int row = 0; row < 9; row++) {
-      int num = n->sudo[row][col];
+    for (int fil = 0; fil < 9; fil++) {
+      int num = n->sudo[fil][col];
       if (num != 0) {
         if (numVistos[num - 1]) {
           return 0;
@@ -73,23 +73,6 @@ int is_valid(Node* n){
     }
   }
   // Validación de submatrices de 3x3
-  /*for (int i = 0; i < 9; i += 3) {
-    for (int j = 0; j < 9; j += 3) {
-      int numVistos[9] = {0};
-      for (int row = i; row < i + 3; row++) {
-        for (int col = j; col < j + 3; col++) {
-          int num = n->sudo[row][col];
-          if (num != 0) {
-            if (numVistos[num - 1]) {
-              return 0;
-            } else {
-              numVistos[num - 1] = 1;
-            }
-          }
-        }
-      }
-    }
-  }*/
   int k=3,p; 
   for(p=0;p<9;p++){
     int i=3*(k/3) + (p/3) ;
