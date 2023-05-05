@@ -1154,3 +1154,20 @@ sudoku.c:147:9: error: ‘n’ may be used uninitialized in this function [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 605a70a
+Fri 05 May 2023 04:18:51 PM UTC: 
+ sudoku.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘pop’:
+sudoku.c:141:13: error: expected ‘;’ before ‘}’ token
+  141 |   popBack(s)
+      |             ^
+      |             ;
+  142 | }
+      | ~            
+sudoku.c: In function ‘DFS’:
+sudoku.c:150:5: error: expected ‘,’ or ‘;’ before ‘if’
+  150 |     if (is_final(n)) return n;
+      |     ^~
+Compilation failed
+e42cf88
