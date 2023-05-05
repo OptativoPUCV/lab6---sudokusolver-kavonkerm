@@ -139,10 +139,10 @@ Node* DFS(Node* initial, int* cont){
   *cont = 0;
   while (!is_empty(stack)){
     Node* n = top(stack);
-    pop(stack);
     if (is_final(n)){
       return n;
     }
+    pop(stack);
     List* adj = get_adj_nodes(n);
     Node* aux = first(adj);
     while(aux){
