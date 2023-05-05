@@ -1186,3 +1186,13 @@ Fri 05 May 2023 04:19:09 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 1b1eaae
+Fri 05 May 2023 04:26:21 PM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:145:15: error: void value not ignored as it ought to be
+  145 |     Node* n = pop(stack);
+      |               ^~~
+Compilation failed
+9da0ca7
