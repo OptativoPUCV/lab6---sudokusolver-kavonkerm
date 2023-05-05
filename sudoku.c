@@ -97,18 +97,19 @@ List* get_adj_nodes(Node* n){
     for (col = 0; col < 9; col++){
       if (n->sudo[fil][col] == 0){
         for (int num = 1; num <= 9; num++) {
-          if (is_valid(n)) {
-            Node *adjNode = (Node*) malloc(sizeof(Node));
-            for (int i = 0; i < 9; i++) {
-              for (int j = 0; j < 9; j++){
-                adjNode->sudo[i][j] = n->sudo[i][j];
-              }
+          //if (is_valid(n)) {
+          Node *adjNode = (Node*) malloc(sizeof(Node));
+          for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++){
+              adjNode->sudo[i][j] = n->sudo[i][j];
             }
-            adjNode->sudo[fil][col] = num;
-            pushBack(list, adjNode);
-            
           }
-          
+          adjNode->sudo[fil][col] = num;
+          if (is_valid(adjNode)){
+            pushBack(list, adjNode);
+          } else{
+            free(adjNode);
+          }
         }
         return list;
       }
