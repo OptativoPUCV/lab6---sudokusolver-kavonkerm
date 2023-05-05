@@ -138,7 +138,7 @@ Node* DFS(Node* initial, int* cont){
   //push(stack,initial);
   *cont = 0;
   
-  while (get_size(stack) == 0){
+  while (get_size(stack) != 0){
     Node* n = top(stack);
     pop(stack);
     
