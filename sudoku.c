@@ -73,7 +73,7 @@ int is_valid(Node* n){
     }
   }
   // Validación de submatrices de 3x3
-  /*int k=3,p; 
+  int k=3,p; 
   for(p=0;p<9;p++){
     int i=3*(k/3) + (p/3) ;
     int j=3*(k%3) + (p%3) ;
@@ -86,7 +86,7 @@ int is_valid(Node* n){
         numVistos[num - 1] = 1;
       }
     }
-  }*/
+  }
   return 1;
 }
 
