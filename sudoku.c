@@ -137,10 +137,6 @@ int is_final(Node* n){
   return 0;
 }
 
-void pop(Stack* s){
-  popBack(s)
-}
-
 Node* DFS(Node* initial, int* cont){
   Stack* stack = createStack();
   push(stack,initial);
@@ -159,9 +155,6 @@ Node* DFS(Node* initial, int* cont){
   }
   return NULL;
 }
-
-
-
 
 /*
 int main( int argc, char *argv[] ){
