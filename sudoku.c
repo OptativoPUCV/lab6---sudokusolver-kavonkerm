@@ -142,7 +142,6 @@ Node* DFS(Node* initial, int* cont){
   while(get_size(stack) != 0){
     Node* n = top(stack);
     if (is_final(n)){
-      pop(stack);
       return n;
     }
     List* adj = get_adj_nodes(n);
