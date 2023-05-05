@@ -1346,3 +1346,19 @@ Fri 05 May 2023 05:32:24 PM UTC:
  1 file changed, 1 deletion(-)
  tests:  0|0
 ad55a14
+Fri 05 May 2023 05:32:52 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:144:18: error: passing argument 1 of ‘is_final’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  144 |     if (is_final(&n)){
+      |                  ^~
+      |                  |
+      |                  Node **
+sudoku.c:124:20: note: expected ‘Node *’ but argument is of type ‘Node **’
+  124 | int is_final(Node* n){
+      |              ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+39ab5b6
