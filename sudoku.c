@@ -93,8 +93,8 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n){
   List* list = createList();
   int fil, col;
-  for (fil = 0; fil < 3; fil++){
-    for (col = 0; col < 3; col++){
+  for (fil = 0; fil < 9; fil++){
+    for (col = 0; col < 9; col++){
       if (n->sudo[fil][col] == 0){
         for (int num = 1; num <= 9; num++) {
           //if (is_valid(n)) {
@@ -105,11 +105,14 @@ List* get_adj_nodes(Node* n){
             }
           }
           adjNode->sudo[fil][col] = num;
-          if (is_valid(adjNode)){
-            pushBack(list, adjNode);
-          } else{
-            free(adjNode);
+          while (get_size(adjNode != 3)){
+            if (is_valid(adjNode)){
+              pushBack(list, adjNode);
+            } else{
+              free(adjNode);
+            }
           }
+         
         }
         return list;
       }
