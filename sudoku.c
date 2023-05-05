@@ -95,7 +95,7 @@ int is_valid(Node* n){
     int i=3*(k/3) + (p/3) ;
     int j=3*(k%3) + (p%3) ;
     int numVistos[9] = {0};
-    int num = n->sudo[row][col];
+    int num = n->sudo[i][j];
     if (num != 0) {
       if (numVistos[num - 1]) {
         return 0;
