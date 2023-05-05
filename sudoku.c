@@ -103,7 +103,7 @@ List* get_adj_nodes(Node* n){
               adjNode->sudo[i][j] = n->sudo[i][j];
             }
           }
-          //adjNode->sudo[fil][col] = num;
+          adjNode->sudo[fil][col] = num;
           if (is_valid(adjNode)){
             pushBack(list, adjNode);
           } else{
