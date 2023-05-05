@@ -106,7 +106,7 @@ List* get_adj_nodes(Node* n){
           }
           if (is_valid(adjNode)){
             pushBack(list, adjNode);
-            //if (get_size(list) == 3) break;
+            if (get_size(list) == 3) break;
           } else{
             free(adjNode);
           }
