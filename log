@@ -1387,3 +1387,8 @@ sudoku.c:145:14: error: incompatible types when returning type ‘Node’ but �
       |              ^~
 Compilation failed
 2b4db16
+Fri 05 May 2023 05:33:18 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+98a23f0
