@@ -46,7 +46,7 @@ void print_node(Node* n){
 int is_valid(Node* n){
   // Validacion de filas
   for (int fil = 0; fil < 9; fil++) {
-    int numVistos[8] = {0};
+    int numVistos[9] = {0};
       for (int col = 0; col < 9; col++) {
         int num = n->sudo[fil][col];
         if (num != 0) {
@@ -60,7 +60,7 @@ int is_valid(Node* n){
   }
   // Validación de columnas
   for (int col = 0; col < 9; col++) {
-    int numVistos[8] = {0};
+    int numVistos[9] = {0};
     for (int fil = 0; fil < 9; fil++) {
       int num = n->sudo[fil][col];
       if (num != 0) {
@@ -77,7 +77,7 @@ int is_valid(Node* n){
   for (p = 0; p < 9 ; p++){
     int i = 3 * (k/3) + (p/3) ;
     int j = 3 * (k%3) + (p%3) ;
-    int numVistos[8] = {0};
+    int numVistos[9] = {0};
     int num = n->sudo[i][j];
     if (num != 0) {
       if (numVistos[num - 1]) {
