@@ -44,7 +44,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  // Validar filas
+  // Validacion de filas
   for (int row = 0; row < 9; row++) {
     int numVistos[9] = {0};
       for (int col = 0; col < 9; col++) {
@@ -58,7 +58,7 @@ int is_valid(Node* n){
         }
       }
   }
-  // Validar columnas
+  // Validación de columnas
   for (int col = 0; col < 9; col++) {
     int numVistos[9] = {0};
     for (int row = 0; row < 9; row++) {
@@ -72,7 +72,7 @@ int is_valid(Node* n){
       }
     }
   }
-  // Validar submatrices de 3x3
+  // Validación de submatrices de 3x3
   for (int i = 0; i < 9; i += 3) {
     for (int j = 0; j < 9; j += 3) {
       int numVistos[9] = {0};
@@ -138,11 +138,12 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-  /*Stack* stack = createStack();
+  Stack* stack = createStack();
   push(stack,initial);
   *cont = 0;
   while(get_size(stack) != 0){
     Node* n = top(stack);
+    pop(stack);
     if (is_final(n)) return n;
     List* adj = get_adj_nodes(n);
     Node* aux = first(adj);
@@ -150,9 +151,8 @@ Node* DFS(Node* initial, int* cont){
       push(stack,aux);
       aux = next(adj);
     }
-    pop(stack);
     (*cont)++;
-  }*/
+  }
   return NULL;
 }
 
