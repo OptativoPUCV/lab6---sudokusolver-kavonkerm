@@ -1362,3 +1362,18 @@ sudoku.c:124:20: note: expected ‘Node *’ but argument is of type ‘Node **�
 cc1: all warnings being treated as errors
 Compilation failed
 39ab5b6
+Fri 05 May 2023 05:32:58 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:144:18: error: incompatible type for argument 1 of ‘is_final’
+  144 |     if (is_final(*n)){
+      |                  ^~
+      |                  |
+      |                  Node
+sudoku.c:124:20: note: expected ‘Node *’ but argument is of type ‘Node’
+  124 | int is_final(Node* n){
+      |              ~~~~~~^
+Compilation failed
+6f19c6b
