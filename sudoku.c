@@ -133,16 +133,11 @@ int is_final(Node* n){
   return 0;
 }
 
-
-int is_emptyS(Stack* s){
-  return (s->size == 0);
-}
-
 Node* DFS(Node* initial, int* cont){
   Stack* stack = createStack();
   //push(stack,initial);
   *cont = 0;
-  while (!is_emptyS(stack)){
+  while (get_size(stack) != 0){
     Node* n = top(stack);
     pop(stack);
     if (is_final(n)){
