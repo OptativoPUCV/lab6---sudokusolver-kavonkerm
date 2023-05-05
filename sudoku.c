@@ -147,7 +147,7 @@ Node* DFS(Node* initial, int* cont){
     Node* aux = first(adj);
     push(stack,aux);
     aux = next(adj);
-    
+    free(n);
     
     (*cont)++;
   }
