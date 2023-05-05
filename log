@@ -1210,3 +1210,14 @@ sudoku.c:146:18: error: ‘n’ undeclared (first use in this function)
 sudoku.c:146:18: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 ae606ff
+Fri 05 May 2023 04:26:33 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:146:9: error: ‘n’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  146 |     if (is_final(n)) return n;
+      |         ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+81ea1fa
