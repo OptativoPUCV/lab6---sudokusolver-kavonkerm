@@ -104,11 +104,12 @@ List* get_adj_nodes(Node* n){
             }
           }
           if (is_valid(adjNode)){
-            adjNode->sudo[fil][col] = num;
             pushBack(list, adjNode);
           } else{
             free(adjNode);
           }
+          adjNode->sudo[fil][col] = num;
+
         }
         return list;
       }
