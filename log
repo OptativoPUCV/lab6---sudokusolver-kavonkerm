@@ -1268,3 +1268,24 @@ Fri 05 May 2023 05:02:32 PM UTC:
  tests:  6|2
 total_score: 45/70
 ab14287
+Fri 05 May 2023 05:06:32 PM UTC: 
+ sudoku.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:98:23: error: ‘row’ undeclared (first use in this function)
+   98 |     int num = n->sudo[row][col];
+      |                       ^~~
+sudoku.c:98:23: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:98:28: error: ‘col’ undeclared (first use in this function)
+   98 |     int num = n->sudo[row][col];
+      |                            ^~~
+sudoku.c:96:9: error: unused variable ‘j’ [-Werror=unused-variable]
+   96 |     int j=3*(k%3) + (p%3) ;
+      |         ^
+sudoku.c:95:9: error: unused variable ‘i’ [-Werror=unused-variable]
+   95 |     int i=3*(k/3) + (p/3) ;
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+41575c6

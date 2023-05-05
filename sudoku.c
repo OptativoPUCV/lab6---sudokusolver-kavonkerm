@@ -73,7 +73,7 @@ int is_valid(Node* n){
     }
   }
   // Validación de submatrices de 3x3
-  for (int i = 0; i < 9; i += 3) {
+  /*for (int i = 0; i < 9; i += 3) {
     for (int j = 0; j < 9; j += 3) {
       int numVistos[9] = {0};
       for (int row = i; row < i + 3; row++) {
@@ -87,6 +87,20 @@ int is_valid(Node* n){
             }
           }
         }
+      }
+    }
+  }*/
+  int k=3,p; 
+  for(p=0;p<9;p++){
+    int i=3*(k/3) + (p/3) ;
+    int j=3*(k%3) + (p%3) ;
+    int numVistos[9] = {0};
+    int num = n->sudo[row][col];
+    if (num != 0) {
+      if (numVistos[num - 1]) {
+        return 0;
+      } else {
+        numVistos[num - 1] = 1;
       }
     }
   }
