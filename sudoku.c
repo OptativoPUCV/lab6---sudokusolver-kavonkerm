@@ -103,8 +103,8 @@ List* get_adj_nodes(Node* n){
               adjNode->sudo[i][j] = n->sudo[i][j];
             }
           }
-          adjNode->sudo[fil][col] = num;
           if (is_valid(adjNode)){
+            adjNode->sudo[fil][col] = num;
             pushBack(list, adjNode);
           } else{
             free(adjNode);
