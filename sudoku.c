@@ -105,12 +105,10 @@ List* get_adj_nodes(Node* n){
             }
           }
           adjNode->sudo[fil][col] = num;
-          while (get_size(adjNode != 3)){
-            if (is_valid(adjNode)){
-              pushBack(list, adjNode);
-            } else{
-              free(adjNode);
-            }
+          if (is_valid(adjNode)){
+            pushBack(list, adjNode);
+          } else{
+            free(adjNode);
           }
          
         }
