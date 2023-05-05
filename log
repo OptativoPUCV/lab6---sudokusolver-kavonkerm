@@ -1221,3 +1221,8 @@ sudoku.c:146:9: error: ‘n’ may be used uninitialized in this function [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 81ea1fa
+Fri 05 May 2023 04:47:08 PM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|0
+fd376fe
