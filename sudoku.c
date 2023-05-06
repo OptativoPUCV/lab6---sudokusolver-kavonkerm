@@ -137,19 +137,14 @@ Node* DFS(Node* initial, int* cont){
   while (get_size(stack) != 0){
     Node* n = top(stack);
     pop(stack);
-    
     if (is_final(n)){
       return n;
     }
-    
     List* adj = get_adj_nodes(n);
-    
     Node* aux = first(adj);
-    
-    while (aux != NULL){
+    while (aux){
       push(stack,aux);
       aux = next(adj);
-      
     }
     free(aux);
     (*cont)++;
