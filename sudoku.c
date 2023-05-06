@@ -118,7 +118,6 @@ List* get_adj_nodes(Node* n){
   return list;
 }
 
-
 int is_final(Node* n){
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
@@ -153,7 +152,7 @@ Node* DFS(Node* initial, int* cont){
       
     }
     
-    free(aux);
+    free(first(adj));
     (*cont)++;    
   }
   return NULL;
